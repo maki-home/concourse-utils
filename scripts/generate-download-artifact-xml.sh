@@ -11,7 +11,7 @@ if [ "$DIR" = ""  ];then
 fi
 
 POM=$DIR/download-artifact.xml
-echo "Generate $POM to Download $groupId:$artifactId:$version to $DIR"
+echo "Generate $POM to Download $groupId:$artifactId:$version"
 
 cat <<EOF > $POM
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -39,7 +39,7 @@ cat <<EOF > $POM
                             <version>${version}</version>
                             <type>jar</type>
                             <overWrite>true</overWrite>
-                            <outputDirectory>${DIR}</outputDirectory>
+                            <outputDirectory>.</outputDirectory>
                             <outputFileName>app.jar</outputFileName>
                         </configuration>
                     </execution>
