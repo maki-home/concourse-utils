@@ -3,7 +3,16 @@
 username=$1
 password=$2
 
-cat <<EOF > settings.xml
+DIR=$3
+if [ "$DIR" = ""  ];then
+    DIR=.
+fi
+
+SETTINGS=$DIR/settings.xml
+
+echo "Generate $SETTINGS"
+
+cat <<EOF > $SETTINGS
 <?xml version="1.0" encoding="utf-8"?>
 <settings>
   <servers>
