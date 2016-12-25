@@ -10,7 +10,7 @@ if [ "$DIR" = ""  ];then
     DIR=.
 fi
 
-POM=$DIR/download-artifacat.xml
+POM=$DIR/download-artifact.xml
 echo "Generate $POM to Download $groupId:$artifactId:$version to $DIR"
 
 cat <<EOF > $POM
