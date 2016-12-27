@@ -17,5 +17,5 @@ M2REPO=$BASE_DIR/m2/rootfs/opt/m2
 echo "M2REPO=$M2REPO"
 
 cd $TARGET_DIR
-./mvnw $MVN_COMMAND -Dmaven.repo.local=$M2REPO
+mvn $MVN_COMMAND -Dmaven.repo.local=$M2REPO
 cd $BASE_DIR

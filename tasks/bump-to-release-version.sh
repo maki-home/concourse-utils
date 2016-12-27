@@ -11,7 +11,7 @@ shopt -s dotglob
 mv -f repo-prod/* master-out
 echo "Bump to $VERSION"
 cd master-out
-./mvnw versions:set -DnewVersion=${VERSION} -Dmaven.repo.local=${M2REPO}
+mvn versions:set -DnewVersion=${VERSION} -Dmaven.repo.local=${M2REPO}
 git config --global user.email "${GIT_EMAIL}"
 git config --global user.name "${GIT_NAME}"
 git add -A

@@ -13,7 +13,7 @@ cd release-out
 git remote add -f prod $BASEDIR/repo-prod
 git merge --no-edit prod/master
 echo "Bump to $VERSION"
-./mvnw versions:set -DnewVersion=${VERSION} -DallowSnapshots -Dmaven.repo.local=$M2REPO
+mvn versions:set -DnewVersion=${VERSION} -DallowSnapshots -Dmaven.repo.local=$M2REPO
 git config --global user.email "${GIT_EMAIL}"
 git config --global user.name "${GIT_NAME}"
 git add -A
