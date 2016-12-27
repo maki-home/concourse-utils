@@ -1,4 +1,6 @@
-#!/bin/sh
+#!/bin/bash
+set -e
+
 DIR=$1
 if [ "$DIR" = ""  ];then
     DIR=.
