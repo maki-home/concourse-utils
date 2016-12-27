@@ -13,6 +13,6 @@ run:
   - -c
   - |
     utils/scripts/add-repos-in-pom-xml.sh repo && \
-    utils/scripts/mvn.sh "test-compile failsafe:integration-test" repo
+    utils/scripts/mvn.sh "test-compile failsafe:integration-test failsafe:verify" repo
 params:
   _JAVA_OPTIONS: -Duser.timezone=Asia/Tokyo -Duser.language=ja -Duser.country=JP -Djava.security.egd=file:/dev/./urandom
