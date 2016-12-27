@@ -16,6 +16,7 @@ run:
   args:
   - -c
   - |
+    utils/scripts/add-repos-in-pom-xml.sh repo && \
     utils/scripts/add-distribution-management-in-pom-xml-to-central.sh repo && \
     utils/scripts/generate-settings-xml-to-central.sh ${SONATYPE_USERNAME} ${SONATYPE_PASSWORD} repo && \
     gpg/deceypt-pgp.sh repo && \
