@@ -1,0 +1,16 @@
+---
+platform: linux
+image_resource:
+  type: docker-image
+  source:
+    repository: making/alpine-java-bash-git
+inputs:
+  - name: repo-other
+  - name: repo-staging
+  - name: utils
+outputs:
+  - name: other-out
+run:
+  path: bash
+  args:
+  - utils/tasks/merge-release-to-other.sh
