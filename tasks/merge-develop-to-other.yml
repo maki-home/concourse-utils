@@ -14,4 +14,4 @@ outputs:
 run:
   path: bash
   args:
-  - utils/tasks/merge-release-to-other.sh
+  - utils/tasks/merge-develop-to-other.sh
