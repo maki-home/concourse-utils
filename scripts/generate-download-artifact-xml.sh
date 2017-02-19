@@ -51,14 +51,14 @@ cat <<EOF > $POM
     <repositories>
         <repository>
             <id>private-snapshots</id>
-            <url>http://nexus.ik.am:8081/repository/maven-snapshots/</url>
+            <url>https://nexus.ik.am:8443/repository/maven-snapshots/</url>
             <snapshots>
                 <enabled>true</enabled>
             </snapshots>
         </repository>
         <repository>
             <id>private-releases</id>
-            <url>http://nexus.ik.am:8081/repository/maven-releases/</url>
+            <url>https://nexus.ik.am:8443/repository/maven-releases/</url>
             <snapshots>
                 <enabled>false</enabled>
             </snapshots>
@@ -67,14 +67,14 @@ cat <<EOF > $POM
     <pluginRepositories>
         <pluginRepository>
             <id>private-plugin-snapshots</id>
-            <url>http://nexus.ik.am:8081/repository/maven-central/</url>
+            <url>https://nexus.ik.am:8443/repository/maven-central/</url>
             <snapshots>
                 <enabled>true</enabled>
             </snapshots>
         </pluginRepository>
         <pluginRepository>
             <id>private-plugin-releases</id>
-            <url>http://nexus.ik.am:8081/repository/maven-central/</url>
+            <url>https://nexus.ik.am:8443/repository/maven-central/</url>
             <snapshots>
                 <enabled>false</enabled>
             </snapshots>
