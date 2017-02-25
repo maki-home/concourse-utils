@@ -16,4 +16,4 @@ VERSION=`curl -s ${URL}/maven-metadata.xml | grep '<release>' | tr -d ' '| tr -d
 echo "Download ${URL}/${VERSION}/${ARTIFACT_ID}-${VERSION}.${PACKAGING}"
 curl -L -J -O ${URL}/${VERSION}/${ARTIFACT_ID}-${VERSION}.${PACKAGING}
 
-mv *.jar output/app.${PACKAGING}
+mv *.${PACKAGING} output/app.${PACKAGING}

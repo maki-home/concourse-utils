@@ -20,4 +20,4 @@ SNAPSHOT=`curl -s ${URL}/maven-metadata.xml | grep '<snapshotVersions>' -A 3 | g
 echo "Download ${URL}/${ARTIFACT_ID}-${SNAPSHOT}.${PACKAGING}"
 curl -L -J -O ${URL}/${ARTIFACT_ID}-${SNAPSHOT}.${PACKAGING}
 
-mv *.jar output/app.${PACKAGING}
+mv *.${PACKAGING} output/app.${PACKAGING}

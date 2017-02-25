@@ -17,4 +17,4 @@ URL=${REPO_URL}/`echo ${GROUP_ID} | sed "s/\./\//g"`/${ARTIFACT_ID}/${VERSION}
 echo "Download ${URL}/${ARTIFACT_ID}-${VERSION}.${PACKAGING}"
 curl -L -J -O ${URL}/${ARTIFACT_ID}-${VERSION}.${PACKAGING}
 
-mv *.jar output/app.${PACKAGING}
+mv *.${PACKAGING} output/app.${PACKAGING}
