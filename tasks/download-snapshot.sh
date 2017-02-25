@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 
 if [ "x${REPO_URL}" = "x" ];then
     REPO_URL=https://nexus.ik.am:8443/repository/maven-snapshots
