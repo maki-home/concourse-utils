@@ -1,0 +1,31 @@
+platform: linux
+image_resource:
+  type: docker-image
+  source:
+    repository: starkandwayne/concourse
+    tag: latest
+inputs:
+- name: repo
+- name: repo-version
+- name: utils
+outputs:
+- name: releases
+- name: master-out
+run:
+  path: bash
+  args:
+  - -c
+  - |
+    set -e
+    utils/scripts/bosh-create-release.sh
+
+    # Prepare for Git Push
+    cd ..
+    shopt -s dotglob
+    mv -f repo/* master-out
+    cd master-out
+    export MESSAGE="[Concourse CI] Release $VERSION"
+    git config --global user.email "${GIT_EMAIL}"
+    git config --global user.name "${GIT_NAME}"
+    git add -A
+    git commit -m "${MESSAGE}"

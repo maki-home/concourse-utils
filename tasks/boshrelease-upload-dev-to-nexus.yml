@@ -1,0 +1,15 @@
+platform: linux
+image_resource:
+  type: docker-image
+  source:
+    repository: starkandwayne/concourse
+    tag: latest
+inputs:
+- name: releases
+- name: repo-version
+run:
+  path: bash
+  args:
+  - -c
+  - |
+    utils/scripts/boshrelease-upload-dev-to-nexus.sh
