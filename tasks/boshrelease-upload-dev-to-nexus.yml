@@ -12,4 +12,4 @@ run:
   args:
   - -c
   - |
-    utils/scripts/boshrelease-upload-dev-to-nexus.sh
+    utils/tasks/boshrelease-upload-dev-to-nexus.sh
