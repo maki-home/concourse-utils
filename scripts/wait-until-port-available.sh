@@ -5,7 +5,7 @@ port=$2
 
 echo "wait $host:$port"
 
-python check.py --host $host --port $port
+python `dirname $0`/check.py --host $host --port $port
 ret=$?
 
 for i in `seq 0 10`;do
@@ -15,7 +15,7 @@ for i in `seq 0 10`;do
     fi
     echo "wait"
     sleep 1
-    python check.py --host $host --port $port
+    python `dirname $0`/check.py --host $host --port $port
     ret=$?
 done
 
