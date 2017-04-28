@@ -5,7 +5,7 @@ BASEDIR=`pwd`
 M2REPO=$BASEDIR/m2/rootfs/opt/m2
 echo "M2REPO=$M2REPO"
 VERSION=`cat repo-version/number`
-MESSAGE="[skip ci] Release $VERSION"
+MESSAGE="Release $VERSION"
 
 shopt -s dotglob
 mv -f repo-prod/* master-out
