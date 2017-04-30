@@ -21,4 +21,4 @@ run:
     utils/scripts/add-distribution-management-in-pom-xml-to-central.sh repo && \
     utils/scripts/generate-settings-xml-to-central.sh ${SONATYPE_USERNAME} ${SONATYPE_PASSWORD} repo && \
     gpg/deceypt-pgp.sh repo && \
-    utils/scripts/mvn.sh "deploy -s settings.xml -DperformRelease=true -Dmaven.test.skip=true" repo
+    utils/scripts/mvn.sh "deploy -s settings.xml -DperformRelease=true -DskipTests=true" repo
