@@ -12,15 +12,16 @@ echo "M2REPO=$M2REPO"
 
 cd $TARGET_DIR
 
-PROPS=target/classes/bootstrap.properties 
+PROPS=src/main/resources/bootstrap.properties 
 if [ ! -f $PROPS ];then
-	PROPS=target/classes/applications.properties 
+	PROPS=src/main/resources/applications.properties 
 	if [ ! -f $PROPS ];then
 		echo "application.properties nor bootstrap.properties is not found."
 		exit 0
 	fi
 fi
 
+echo "Update $PROPS"
 DEPS=`mvn dependency:list -Dmaven.repo.local=$M2REPO | grep -e compile -e runtime | awk '{print $2}' | sort`
 VALS=
 i=0
