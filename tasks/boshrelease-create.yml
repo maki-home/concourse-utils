@@ -11,6 +11,8 @@ inputs:
 outputs:
 - name: releases
 - name: master-out
+caches:
+- path: repo/blobs
 run:
   path: bash
   args:
