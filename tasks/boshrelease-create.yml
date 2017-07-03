@@ -22,7 +22,7 @@ run:
     # Prepare for Git Push
     cd ..
     shopt -s dotglob
-    mv -f repo/* master-out
+    mv -f releases/* master-out
     cd master-out
     export MESSAGE="[Concourse CI] Release $VERSION"
     git config --global user.email "${GIT_EMAIL}"
