@@ -11,11 +11,12 @@ outputs:
 - name: releases
 caches:
 - path: repo/blobs
-- path: ~/.bosh
+- path: repo/.blobs
 run:
   path: bash
   args:
   - -c
   - |
-    find ~/.bosh
+    find repo/blobs
+    find repo/.blobs
     utils/scripts/bosh-create-release.sh
