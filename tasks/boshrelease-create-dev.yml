@@ -14,4 +14,8 @@ caches:
 run:
   path: bash
   args:
-  - utils/scripts/bosh-create-release.sh
+  - -c
+  - |
+    pwd
+    ls -la
+    bash utils/scripts/bosh-create-release.sh
