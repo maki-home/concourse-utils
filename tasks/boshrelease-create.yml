@@ -22,7 +22,6 @@ run:
     utils/scripts/bosh-create-release.sh
 
     # Prepare for Git Push
-    cd ..
     shopt -s dotglob
     mv -f releases/* master-out
     cd master-out
