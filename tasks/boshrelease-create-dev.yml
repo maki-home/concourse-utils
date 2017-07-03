@@ -9,6 +9,8 @@ inputs:
 - name: utils
 outputs:
 - name: releases
+caches:
+- path: /root/.bosh/cache
 run:
   path: bash
   args:
