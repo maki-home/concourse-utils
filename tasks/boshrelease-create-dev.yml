@@ -16,6 +16,4 @@ run:
   args:
   - -c
   - |
-    pwd
-    ls -la
-    bash utils/scripts/bosh-create-release.sh
+    utils/scripts/bosh-create-release.sh
