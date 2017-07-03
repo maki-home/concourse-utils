@@ -13,6 +13,7 @@ outputs:
 - name: master-out
 caches:
 - path: repo/blobs
+- path: repo/.blobs
 run:
   path: bash
   args:
