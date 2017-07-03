@@ -16,4 +16,5 @@ run:
   args:
   - -c
   - |
+    find repo/blobs
     utils/scripts/bosh-create-release.sh
