@@ -10,7 +10,7 @@ inputs:
 outputs:
 - name: releases
 caches:
-- path: /root/.bosh/cache
+- path: ~/.bosh
 run:
   path: bash
   args:
