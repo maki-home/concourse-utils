@@ -22,10 +22,10 @@ run:
     shopt -s dotglob
     
     utils/scripts/bosh-create-release.sh
-    mv -f releases/* master-out
+    scp -r repo/* master-out/
     
     # Prepare for Git Push
-    cd repo
+    cd master-out
     export MESSAGE="[Concourse CI] Release $VERSION"
     git config --global user.email "${GIT_EMAIL}"
     git config --global user.name "${GIT_NAME}"
