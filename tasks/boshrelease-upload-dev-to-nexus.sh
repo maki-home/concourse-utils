@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 
 export VERSION=`cat repo-version/number`
 cd releases
