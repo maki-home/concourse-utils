@@ -19,12 +19,13 @@ run:
   - -c
   - |
     set -e
-    utils/scripts/bosh-create-release.sh
-
-    # Prepare for Git Push
     shopt -s dotglob
+    
+    utils/scripts/bosh-create-release.sh
     mv -f releases/* master-out
-    cd master-out
+    
+    # Prepare for Git Push
+    cd repo
     export MESSAGE="[Concourse CI] Release $VERSION"
     git config --global user.email "${GIT_EMAIL}"
     git config --global user.name "${GIT_NAME}"
