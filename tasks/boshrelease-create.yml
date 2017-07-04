@@ -21,6 +21,7 @@ run:
   - |
     set -e
     shopt -s dotglob
+    VERSION=`cat repo-version/number`
     
     utils/scripts/bosh-create-release.sh
     scp -r repo/* master-out/
