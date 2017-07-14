@@ -10,6 +10,8 @@ fi
 
 cd repo
 ${BASEDIR}/utils/scripts/generate-private-yml.sh
-mkdir src
+mkdir -p src
+mkdir -p packages
+mkdir -p jobs
 bosh -n create release --force --with-tarball ${BOSH_OPTS}
 mv ./*releases/*/*.tgz ../releases/
