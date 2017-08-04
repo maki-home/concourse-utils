@@ -15,3 +15,4 @@ mkdir -p packages
 mkdir -p jobs
 bosh -n create release --force --with-tarball ${BOSH_OPTS}
 mv ./*releases/*/*.tgz ../releases/
+sha1sum ../releases/*.tgz
