@@ -51,14 +51,14 @@ cat <<EOF > $POM
     <repositories>
         <repository>
             <id>private-snapshots</id>
-            <url>https://nexus-192-168-11-210.sslip.io/repository/maven-snapshots/</url>
+            <url>https://nexus.ik.am/repository/maven-snapshots/</url>
             <snapshots>
                 <enabled>true</enabled>
             </snapshots>
         </repository>
         <repository>
             <id>private-releases</id>
-            <url>https://nexus-192-168-11-210.sslip.io/repository/maven-releases/</url>
+            <url>https://nexus.ik.am/repository/maven-releases/</url>
             <snapshots>
                 <enabled>false</enabled>
             </snapshots>
@@ -67,14 +67,14 @@ cat <<EOF > $POM
     <pluginRepositories>
         <pluginRepository>
             <id>private-plugin-snapshots</id>
-            <url>https://nexus-192-168-11-210.sslip.io/repository/maven-central/</url>
+            <url>https://nexus.ik.am/repository/maven-central/</url>
             <snapshots>
                 <enabled>true</enabled>
             </snapshots>
         </pluginRepository>
         <pluginRepository>
             <id>private-plugin-releases</id>
-            <url>https://nexus-192-168-11-210.sslip.io/repository/maven-central/</url>
+            <url>https://nexus.ik.am/repository/maven-central/</url>
             <snapshots>
                 <enabled>false</enabled>
             </snapshots>
