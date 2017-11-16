@@ -2,7 +2,7 @@
 set -e
 
 if [ "x${REPO_URL}" = "x" ];then
-    REPO_URL=https://nexus-192-168-11-210.sslip.io/repository/maven-snapshots
+    REPO_URL=https://nexus.ik.am/repository/maven-snapshots
 fi
 
 if [ "x${VERSION}" = "x" ];then
